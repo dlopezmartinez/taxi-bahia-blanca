@@ -62,21 +62,22 @@ onMounted(() => {
           <p>¡Confía en nosotros para tu próximo viaje!</p>
         </div>
       </section>
-      <section class="about-me--info">
-        <p>Pulsa para contactarme por donde prefieras</p>
-        <h3>
-          <a href="tel:633182123" aria-label="Telefono de contacto"
-            >Telefono: 633182123 <PhoneIcon style="margin-left: auto"
-          /></a>
-        </h3>
-        <h3>
-          <a
-            href="https://wa.me/633182123?text=Hola!, Necesito un viaje."
-            aria-label="Whatsapp de contacto"
-            target="_blank"
-            >Contacta por whatsapp<WhatsappIcon style="margin-left: auto"
-          /></a>
-        </h3>
+      <section class="about-me--wrapper">
+        <div class="about-me--info">
+          <h3>
+            <a href="tel:633182123" aria-label="Telefono de contacto"
+              >Telefono<PhoneIcon style="margin-left: auto"
+            /></a>
+          </h3>
+          <h3>
+            <a
+              href="https://wa.me/633182123?text=Hola!, Necesito un viaje."
+              aria-label="Whatsapp de contacto"
+              target="_blank"
+              >Whatsapp<WhatsappIcon style="margin-left: auto"
+            /></a>
+          </h3>
+        </div>
       </section>
     </article>
 
@@ -143,7 +144,7 @@ header {
   flex: 2;
   display: flex;
   justify-content: center;
-  height: 400px;
+  height: 300px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -180,27 +181,31 @@ header {
   max-width: 70vw;
 }
 
+.about-me--wrapper {
+  display: flex;
+  place-items: center;
+  position: absolute;
+  width: 100%;
+  bottom: -50px;
+}
+
 .about-me--info {
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 20px;
+  min-width: 40vw;
+  max-width: 60vw;
+  gap: 10px;
   color: #183372;
-  position: absolute;
-  bottom: -75px;
-  left: 12.5%;
   background: #f4f4f4;
-  border-radius: 20px;
-  width: 75vw;
-  padding: 10px 0px;
-
+  border-radius: 10px;
+  padding: 10px 40px;
   a {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
   }
-
   --color-icon: #183372;
 }
 
@@ -254,7 +259,7 @@ header {
 }
 
 .--counter {
-  font-size: 64px;
+  font-size: 56px;
   font-weight: 900;
 }
 
